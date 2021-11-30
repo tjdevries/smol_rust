@@ -1,18 +1,26 @@
 use std::collections::HashMap;
 
 pub struct MyStruct {
-    a: u64,
+    a: HashMap<usize, usize>,
 }
 
 pub fn my_func() -> MyStruct {
-    MyStruct { a: 5 }
+    MyStruct { a: HashMap::new() }
+}
+
+pub fn print_struct(s: MyStruct) {
+    println!("My Struct: {:?}", s.a);
 }
 
 #[cfg(test)]
 mod tests {
+    use std::collections::HashMap;
+
+    use crate::my_func;
+
     #[test]
     fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
+        let result = my_func();
+        assert_eq!(result.a, HashMap::new());
     }
 }
