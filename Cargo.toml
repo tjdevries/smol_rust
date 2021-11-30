@@ -3,6 +3,7 @@ name = "smol_rust"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
+description = "This is just a test repo for me & rust analyzer to hang"
 
 [lib]
 name = "smol_rust"
